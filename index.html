@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f7f4">
+  <title>Proyecto V — Proyecto número 5 | Iván David Carvajal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page-shell">
+    <section class="login-card" aria-labelledby="welcome-title">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">V</span><span>Proyecto V</span></div>
+      <div id="auth-view">
+      <div class="intro">
+        <p class="eyebrow">PROYECTO NÚMERO 5</p>
+        <h1 id="welcome-title">Bienvenido a<br>Proyecto V.</h1>
+        <p class="subtitle" id="mode-description">Ingresa tus datos para continuar.</p>
+        <p class="author">Creado por <strong>Iván David Carvajal</strong></p>
+      </div>
+
+      <form id="auth-form" novalidate>
+        <label for="email">Correo electrónico</label>
+        <div class="input-wrap"><span class="input-icon" aria-hidden="true">✉</span><input id="email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required></div>
+        <div class="label-row"><label for="password">Contraseña</label><span class="hint">Mínimo 6 caracteres</span></div>
+        <div class="input-wrap"><span class="input-icon lock" aria-hidden="true">●</span><input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" minlength="6" required><button class="toggle-password" id="toggle-password" type="button" aria-label="Mostrar contraseña">Ver</button></div>
+        <button class="submit-button" id="submit-button" type="submit"><span id="submit-label">Iniciar sesión</span><span aria-hidden="true">→</span></button>
+      </form>
+
+      <p class="message" id="message" role="status" aria-live="polite"></p>
+      <div class="switch-row"><span id="switch-prompt">¿Aún no tienes cuenta?</span> <button class="text-button" id="switch-mode" type="button">Crear cuenta</button></div>
+      <p class="privacy">Al continuar, aceptas nuestros <a href="#">términos</a> y <a href="#">política de privacidad</a>.</p>
+      </div>
+      <section class="dashboard hidden" id="dashboard" aria-labelledby="dashboard-title">
+        <p class="eyebrow">ACCESO CORRECTO</p>
+        <h1 id="dashboard-title">¡Bienvenido,<br>profesor!</h1>
+        <p class="subtitle">Este es Proyecto V, tu proyecto número 5.</p>
+        <div class="welcome-card"><span class="welcome-icon" aria-hidden="true">✓</span><div><strong>Ya estás dentro</strong><p>Has iniciado sesión con <span id="user-email"></span>.</p></div></div>
+        <button class="submit-button logout-button" id="sign-out" type="button"><span>Cerrar sesión</span><span aria-hidden="true">↗</span></button>
+      </section>
+    </section>
+    <aside class="visual-panel" aria-label="Información de Proyecto V">
+      <div class="sun"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+      <div class="panel-copy"><span class="pill"><span class="pulse"></span> PROYECTO V · N.º 5</span><h2>Una idea<br>que empieza<br>a tomar forma.</h2><p>Un proyecto de Iván David Carvajal.</p></div>
+      <div class="panel-footer"><span>Simple, seguro y tuyo.</span><span>01 — 03</span></div>
+    </aside>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="app.js"></script>
+</body>
+</html>
